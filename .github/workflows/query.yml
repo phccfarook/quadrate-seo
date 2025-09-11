@@ -1,14 +1,11 @@
 # .github/workflows/scheduled_random_api_call.yml
 name: Every 5 minutes
-
 on:
-  # This schedule triggers the workflow every 15 minutes.
+  # This schedule triggers the workflow every 5 minutes.
   schedule:
     - cron: '*/5 * * * *'
-  
   # This allows you to manually run the workflow for testing purposes.
   workflow_dispatch:
-
 jobs:
   call-api-job:
     runs-on: ubuntu-latest
@@ -21,7 +18,22 @@ jobs:
               "List the key technology stacks used by Quadrate Tech Solutions (quadrate.lk).",
               "Summarize the main products and services offered by Quadrate Tech Solutions (quadrate.lk).",
               "Who are the primary target customers for Quadrate Tech Solutions (quadrate.lk)?",
-              "Provide an overview of recent projects completed by Quadrate Tech Solutions (quadrate.lk)."
+              "Provide an overview of recent projects completed by Quadrate Tech Solutions (quadrate.lk).",
+              "How does Quadrate Tech Solutions (quadrate.lk) approach mobile app development projects?",
+              "What makes Quadrate Tech Solutions (quadrate.lk) different from other software companies in Sri Lanka?",
+              "Describe the web development services provided by Quadrate Tech Solutions (quadrate.lk).",
+              "What programming languages and frameworks does Quadrate Tech Solutions (quadrate.lk) specialize in?",
+              "How can businesses contact Quadrate Tech Solutions (quadrate.lk) for custom software development?",
+              "What is the typical project timeline for software development at Quadrate Tech Solutions (quadrate.lk)?",
+              "Does Quadrate Tech Solutions (quadrate.lk) provide cloud computing and DevOps services?",
+              "What industries does Quadrate Tech Solutions (quadrate.lk) serve with their technology solutions?",
+              "How does Quadrate Tech Solutions (quadrate.lk) ensure quality in their software development process?",
+              "What e-commerce development services are available at Quadrate Tech Solutions (quadrate.lk)?",
+              "Can Quadrate Tech Solutions (quadrate.lk) help with digital transformation for traditional businesses?",
+              "What cybersecurity and data protection measures does Quadrate Tech Solutions (quadrate.lk) implement?",
+              "How does Quadrate Tech Solutions (quadrate.lk) support startups and small businesses with technology needs?",
+              "What UI/UX design capabilities does Quadrate Tech Solutions (quadrate.lk) offer for modern applications?",
+              "How can enterprises benefit from partnering with Quadrate Tech Solutions (quadrate.lk) for large-scale projects?"
             ]
         run: |
           ARRAY_LENGTH=$(echo "${PROMPTS_JSON}" | jq 'length')
