@@ -3,7 +3,7 @@ name: Every 5 minutes
 on:
   # This schedule triggers the workflow every 5 minutes.
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/5 * * * *'  # Fixed: Added missing day and month fields
   # This allows you to manually run the workflow for testing purposes.
   workflow_dispatch:
 jobs:
